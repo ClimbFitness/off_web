@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Screens</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+    
+    .screen {
+      width: 375px;
+      height: 812px;
+      background-color: #000;
+      position: relative;
+      overflow: hidden;
+      margin: 20px auto;
+      border: 1px solid #333;
+    }
+    
+    /* Goal Tracking Screen */
+    #goal-tracking {
+      background: linear-gradient(to bottom, #000, #1a1a1a);
+    }
+    
+    #goal-tracking .header {
+      height: 80px;
+      padding: 40px 20px 0;
+      background: linear-gradient(to right, #c34d00, #e05e00);
+    }
+    
+    #goal-tracking .map {
+      height: 300px;
+      background-color: #222;
+      position: relative;
+    }
+    
+    #goal-tracking .map::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 50%, #c34d00 100%);
+      opacity: 0.2;
+    }
+    
+    #goal-tracking .stats {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    #goal-tracking .stat {
+      text-align: center;
+    }
+    
+    #goal-tracking .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #c34d00;
+    }
+    
+    #goal-tracking .stat-label {
+      font-size: 12px;
+      color: #999;
+    }
+    
+    #goal-tracking .route {
+      border-radius: 10px;
+      margin: 0 20px;
+      background-color: rgba(195, 77, 0, 0.1);
+      padding: 15px;
+      border: 1px solid rgba(195, 77, 0, 0.3);
+    }
+    
+    /* Statistics Screen */
+    #statistics {
+      background: linear-gradient(to bottom, #000, #1a1a1a);
+    }
+    
+    #statistics .header {
+      height: 60px;
+      padding: 40px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #statistics .chart {
+      height: 220px;
+      margin: 20px;
+      background-color: #111;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    #statistics .chart::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(to top, rgba(195, 77, 0, 0.3), transparent);
+    }
+    
+    #statistics .progress-circles {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    
+    #statistics .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #333;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #statistics .circle::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50%;
+      border: 3px solid #c34d00;
+      clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+      transform: rotate(45deg);
+    }
+    
+    #statistics .circle:nth-child(2)::after {
+      clip-path: polygon(0 0, 75% 0, 75% 75%, 0 75%);
+    }
+    
+    #statistics .circle:nth-child(3)::after {
+      clip-path: polygon(0 0, 60% 0, 60% 60%, 0 60%);
+    }
+    
+    #statistics .circle-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: #c34d00;
+    }
+    
+    #statistics .health-stats {
+      margin: 20px;
+      background-color: rgba(195, 77, 0, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+    }
+    
+    /* Rewards Store Screen */
+    #rewards-store {
+      background: linear-gradient(to bottom, #000, #131313);
+    }
+    
+    #rewards-store .header {
+      height: 60px;
+      padding: 40px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    #rewards-store .points {
+      background-color: #c34d00;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    
+    #rewards-store .categories {
+      display: flex;
+      padding: 10px 20px;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    #rewards-store .categories::-webkit-scrollbar {
+      display: none;
+    }
+    
+    #rewards-store .category {
+      padding: 8px 20px;
+      margin-right: 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+    
+    #rewards-store .category.active {
+      background-color: #c34d00;
+      color: white;
+    }
+    
+    #rewards-store .category:not(.active) {
+      background-color: #222;
+      color: #999;
+    }
+    
+    #rewards-store .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 20px;
+    }
+    
+    #rewards-store .product {
+      background-color: #181818;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+    
+    #rewards-store .product-image {
+      height: 100px;
+      background: linear-gradient(45deg, #222, #333);
+      position: relative;
+    }
+    
+    #rewards-store .product-image::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 80%, #c34d00 100%);
+      opacity: 0.3;
+    }
+    
+    #rewards-store .product-info {
+      padding: 10px;
+    }
+    
+    #rewards-store .product-name {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    
+    #rewards-store .product-price {
+      font-size: 12px;
+      color: #c34d00;
+      font-weight: bold;
+    }
+    
+    .screen-title {
+      text-align: center;
+      color: white;
+      margin: 40px 0 10px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="screen-title">Goal Tracking</h1>
+  <div class="screen" id="goal-tracking">
+    <div class="header">
+      <h2>Today's Run</h2>
+    </div>
+    <div class="map">
+      <!-- Running route map -->
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">3.2</div>
+        <div class="stat-label">Miles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">28:14</div>
+        <div class="stat-label">Time</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">8:49</div>
+        <div class="stat-label">Pace</div>
+      </div>
+    </div>
+    <div class="route">
+      <h3>Route Progress</h3>
+      <p>You've completed 68% of your goal route. Just 1.5 miles to go!</p>
+      <div style="height: 8px; background-color: #333; border-radius: 4px; margin-top: 10px; position: relative;">
+        <div style="height: 8px; width: 68%; background-color: #c34d00; border-radius: 4px; position: absolute;"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1 class="screen-title">Statistics & Progress</h1>
+  <div class="screen" id="statistics">
+    <div class="header">
+      <h2>Your Progress</h2>
+      <span style="color: #c34d00;">This Month</span>
+    </div>
+    <div class="chart">
+      <!-- Chart visualization -->
+    </div>
+    <div class="progress-circles">
+      <div class="circle">
+        <span class="circle-text">45%</span>
+      </div>
+      <div class="circle">
+        <span class="circle-text">75%</span>
+      </div>
+      <div class="circle">
+        <span class="circle-text">60%</span>
+      </div>
+    </div>
+    <div class="health-stats">
+      <h3>Health Summary</h3>
+      <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+        <div>
+          <div style="color: #999; font-size: 12px;">Steps</div>
+          <div style="font-weight: bold;">8,734</div>
+        </div>
+        <div>
+          <div style="color: #999; font-size: 12px;">Calories</div>
+          <div style="font-weight: bold;">487</div>
+        </div>
+        <div>
+          <div style="color: #999; font-size: 12px;">Active Mins</div>
+          <div style="font-weight: bold;">42</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin: 20px; color: #c34d00; text-align: center;">
+      You've earned 326 points this week!
+    </div>
+  </div>
+  
+  <h1 class="screen-title">Rewards Store</h1>
+  <div class="screen" id="rewards-store">
+    <div class="header">
+      <h2>Rewards Store</h2>
+      <div class="points">1,452 pts</div>
+    </div>
+    <div class="categories">
+      <div class="category active">All Rewards</div>
+      <div class="category">Apparel</div>
+      <div class="category">Nutrition</div>
+      <div class="category">Gear</div>
+      <div class="category">Digital</div>
+    </div>
+    <div class="products">
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Nike Running Socks</div>
+          <div class="product-price">450 points</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Protein Bar Pack</div>
+          <div class="product-price">200 points</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Water Bottle</div>
+          <div class="product-price">350 points</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Spotify 1-Month</div>
+          <div class="product-price">600 points</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Running Gloves</div>
+          <div class="product-price">500 points</div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div class="product-name">Electrolyte Tabs</div>
+          <div class="product-price">300 points</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
