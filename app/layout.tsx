@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Climb - Fitness App that Fuels Your Life",
   description: "Climb if a completely free iOS app that gives you actual rewards when you achieve your fitness goals",
+  icons: {
+    icon: '/images/best_climb_logo.png',
+  },
 }
 
 export default function RootLayout({
