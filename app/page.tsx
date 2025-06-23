@@ -38,18 +38,16 @@ export default function Home() {
             </p>
 
             <div className="flex items-center justify-center space-x-4 mb-8">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/waitlist"
                 className="group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden rounded-md border border-white/10 transition-all duration-300"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-orange-700/40 to-orange-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md"></span>
                 <span className="relative text-white font-medium tracking-wide">
                   <DownloadIcon className="inline-block w-5 h-5 mr-2" />
-                  Lauching in June
+                  Join Waitlist
                 </span>
-              </a>
+              </Link>
 
               <a
                 href="mailto:corporate@climbfitness.ca"
@@ -174,7 +172,7 @@ export default function Home() {
               Find your Perfect Fit
             </GradientHeading>
             <GradientHeading as="h3" className="text-2xl md:text-3xl" weight="thin">
-              With Climb Plans (Launching Soon)
+              With Climb Plans
             </GradientHeading>
           </div>
 
@@ -190,7 +188,7 @@ export default function Home() {
               price="$0"
               period="/month"
               features={["Premium Access for 14 days", "All Features", "Free Rewards"]}
-              ctaText="Download for Free"
+              ctaText="Join Waitlist"
               variant="basic"
             />
 
@@ -204,7 +202,7 @@ export default function Home() {
                 "Get rewards 6x faster",
                 "Infinite personalization and goal-setting",
               ]}
-              ctaText="Subscribe"
+              ctaText="Join Waitlist"
               variant="featured"
               showArrow={true}
             />
@@ -218,7 +216,7 @@ export default function Home() {
                 "Fine-tuned models for your gym/company",
                 "24/7 support and transparent data",
               ]}
-              ctaText="Talk to Sales"
+              ctaText="Join Waitlist"
               variant="enterprise"
             />
           </div>
@@ -248,8 +246,8 @@ export default function Home() {
           <CTACard
             title="Start climbing your own mountain."
             description="Join thousands who use our fuel to get the results they want."
-            primaryButtonText="Launching Soon"
-            secondaryButtonText="Stay Tuned."
+            primaryButtonText="Join Waitlist"
+            secondaryButtonText="Learn More"
           />
         </div>
       </section>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { CircleCheck, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import Link from "next/link"
 
 interface PricingCardProps {
   title: string
@@ -76,27 +77,29 @@ export function PricingCard({ title, price, period, features, ctaText, variant, 
         </ul>
 
         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
-          <Button
-            className={`w-full relative overflow-hidden group ${
-              isFeatured
-                ? "bg-gradient-to-r from-orange-700 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white border-0"
-                : isBasic
-                  ? "bg-transparent border border-slate-700 hover:border-slate-500 text-white"
-                  : "bg-transparent border border-slate-700 hover:border-slate-500 text-white"
-            }`}
-          >
-            {/* Button glow effect */}
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+          <Link href={ctaText === "Join Waitlist" ? "/waitlist" : "#"}>
+            <Button
+              className={`w-full relative overflow-hidden group ${
+                isFeatured
+                  ? "bg-gradient-to-r from-orange-700 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white border-0"
+                  : isBasic
+                    ? "bg-transparent border border-slate-700 hover:border-slate-500 text-white"
+                    : "bg-transparent border border-slate-700 hover:border-slate-500 text-white"
+              }`}
+            >
+              {/* Button glow effect */}
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/10 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
 
-            <span className="flex items-center justify-center relative z-10">
-              {ctaText}
-              {showArrow && (
-                <motion.span animate={{ x: isHovered ? 5 : 0 }} transition={{ duration: 0.3 }}>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </motion.span>
-              )}
-            </span>
-          </Button>
+              <span className="flex items-center justify-center relative z-10">
+                {ctaText}
+                {showArrow && (
+                  <motion.span animate={{ x: isHovered ? 5 : 0 }} transition={{ duration: 0.3 }}>
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </motion.span>
+                )}
+              </span>
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </motion.div>

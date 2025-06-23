@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import Link from "next/link"
 import { GradientHeading } from "@/components/gradient-heading"
 
 interface CTACardProps {
@@ -63,24 +64,28 @@ export function CTACard({ title, description, primaryButtonText, secondaryButton
 
         <div className="flex flex-col sm:flex-row gap-4">
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-            <Button
-              size="lg"
-              className="relative overflow-hidden group bg-gradient-to-r from-orange-700 to-orange-600 hover:from-orange-600 hover:to-orange-500 border-0 transition-all duration-300"
-            >
-              {/* Button shine effect */}
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-              <span className="relative z-10">{primaryButtonText}</span>
-            </Button>
+            <Link href="/waitlist">
+              <Button
+                size="lg"
+                className="relative overflow-hidden group bg-gradient-to-r from-orange-700 to-orange-600 hover:from-orange-600 hover:to-orange-500 border-0 transition-all duration-300"
+              >
+                {/* Button shine effect */}
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                <span className="relative z-10">{primaryButtonText}</span>
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white/20 hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
-            >
-              {secondaryButtonText}
-            </Button>
+            <Link href="#features">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white/20 hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              >
+                {secondaryButtonText}
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
