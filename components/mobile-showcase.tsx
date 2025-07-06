@@ -68,7 +68,7 @@ export function MobileShowcase() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/stats_showcase.png"
+                  src="/images/rawStats.jpeg"
                   alt="Stats Showcase"
                   fill
                   sizes="(max-width: 768px) 100vw, 340px"
@@ -99,7 +99,7 @@ export function MobileShowcase() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/goals.png"
+                  src="/images/rawGoals.png"
                   alt="Goals App Screen"
                   fill
                   sizes="(max-width: 768px) 100vw, 340px"
@@ -183,7 +183,7 @@ export function MobileShowcase() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/store_showcase.png"
+                  src="/images/rawStore.png"
                   alt="Store Showcase"
                   fill
                   sizes="(max-width: 768px) 100vw, 340px"

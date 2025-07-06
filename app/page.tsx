@@ -69,7 +69,7 @@ export default function Home() {
                 >
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm text-slate-300">Access to Premium for 14 days</span>
+                <span className="text-sm text-slate-300">Access to Premium for 31 days</span>
               </div>
               
               <div className="flex items-center bg-black/30 px-3 py-1 rounded-full border border-white/5">
@@ -197,9 +197,9 @@ export default function Home() {
               price="$17.99"
               period="/month"
               features={[
+                "Get points 600% faster",
                 "Everything in Core and more...",
                 "AI/ML insights, stats, training",
-                "Get rewards 6x faster",
                 "Infinite personalization and goal-setting",
               ]}
               ctaText="Join Waitlist"
@@ -264,11 +264,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
-              <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+              <Link href="/terms-of-service" className="text-slate-300 hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-slate-300 hover:text-white transition-colors">
-                Policy
+              <Link href="/privacy-policy" className="text-slate-300 hover:text-white transition-colors">
+                Privacy Policy
               </Link>
               <Link href="#" className="text-slate-300 hover:text-white transition-colors">
                 Documentation

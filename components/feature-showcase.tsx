@@ -17,21 +17,21 @@ export function FeatureShowcase() {
       title: "Set Goals and Progress",
       description: "Completely automatic, just define your goals and we'll do the tracking.",
       icon: <Flame className="h-5 w-5 text-orange-400" />,
-      image: "/first.png"
+      image: "/newIndex.png"
     },
     {
       id: 1,
       title: "AI-powered insights",
       description: "We look beyond simple charts and graphs, and use AI to give you insights into your consistency, recovery, and strengths.",
       icon: <ChartNoAxesColumnIncreasing className="h-5 w-5 text-orange-400" />,
-      image: "/stats.png",
+      image: "/newStats.png",
     },
     {
       id: 2,
       title: "Redeem Rewards",
       description: "Use the points you earn to redeem for rewards from our store, or gift cards to your favorite brands.",
       icon: <Gift className="h-5 w-5 text-orange-400" />,
-      image: "/store.png",
+      image: "/newStore.png",
     },
   ]
 
@@ -89,7 +89,7 @@ export function FeatureShowcase() {
         ))}
       </div>
 
-      <div className="relative h-[400px] rounded-xl overflow-hidden border border-slate-800/50 bg-black/80 backdrop-blur-xl">
+      <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] rounded-xl overflow-hidden border border-slate-800/50 bg-black/80 backdrop-blur-xl">
         <div className="absolute inset-0 bg-grid-white/[0.02]"></div>
 
         {/* Interactive glow effect that follows mouse */}
@@ -117,7 +117,7 @@ export function FeatureShowcase() {
               src={features[activeFeature].image || "/placeholder.svg"}
               alt={features[activeFeature].title}
               fill
-              className="object-cover"
+              className="object-contain"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>

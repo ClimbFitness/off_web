@@ -1,0 +1,78 @@
+Terms of Service
+
+
+Last Updated: April 19th, 2025
+Effective Date: May 8th, 2025
+
+
+Welcome to Climb ("we," "our," "us"). These Terms of Service ("Terms") govern your access to and use of the Climb mobile application ("App"), including our gift card rewards system and subscription-based features.
+
+
+By downloading, accessing, or using Climb, you agree to be bound by these Terms. If you do not agree, please do not use the App.
+
+
+1. Eligibility
+You must be at least 13 years old to use Climb. If you are under 18, you represent that you have your parent's or legal guardian's permission to use the App.
+
+
+2. Account Registration
+To use certain features, you may be required to create an account. You agree to provide accurate and complete information and keep it updated. You are responsible for safeguarding your login credentials. Climb is not liable for any unauthorized access caused by your failure to maintain confidentiality.
+
+
+3. Subscriptions and Payments
+Climb offers premium features through auto-renewing in-app subscriptions managed via Apple's StoreKit and RevenueCat. All purchases of digital goods (e.g., analytics, themes, premium rewards) must be made via the App Store. Subscription prices, billing periods, and benefits will be disclosed in-app before purchase. You can manage or cancel your subscription through your Apple ID settings.
+
+
+4. Gift Card Rewards
+Our app offers digital gift cards as rewards, fulfilled through Tremendous. Gift card redemption, delivery, and customer service are handled through Tremendous's systems. By redeeming a gift card, you agree to Tremendous's Terms of Service and Privacy Policy.
+
+
+5. Rewards and Points
+Climb may offer points or rewards for achieving personal goals. These have no cash value and are non-transferable. We reserve the right to revoke, modify, or suspend the rewards system at any time, including the removal of points earned through fraud, abuse, or technical error.
+
+
+
+
+6. Acceptable Use
+You agree not to:
+Use Climb for any unlawful or fraudulent activity
+Interfere with or disrupt the app or servers
+Upload harmful code or viruses
+Attempt to reverse-engineer any part of Climb
+
+
+7. Intellectual Property
+All content, branding, logos, and features within Climb are the intellectual property of Climb Inc. or its partners. You may not copy, reproduce, or distribute any part of the app without our prior written permission.
+
+
+8. Health Disclaimer
+Climb provides goal-setting and fitness-tracking tools. It is not a medical or diagnostic app. You should consult a healthcare professional before starting any fitness program. Use Climb at your own risk.
+
+
+9. Termination
+We may suspend or terminate your access to Climb at any time, with or without notice, if you violate these Terms.
+
+
+10. Changes to These Terms
+We may update these Terms from time to time. Material changes will be communicated in-app or via email. Continued use of Climb means you accept the updated Terms.
+
+
+11. Governing Law and Dispute Resolution
+These Terms shall be governed by and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada.
+Any disputes arising out of or relating to these Terms shall be resolved through binding arbitration in Toronto, Ontario, unless otherwise required by applicable law. You waive any right to a trial by jury or to participate in a class action.
+
+
+12. Limitation of Liability
+To the maximum extent permitted by law, Climb Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, arising from your use of the App, even if we have been advised of the possibility of such damages. Our total liability shall not exceed the amount you paid us, if any, in the past 12 months.
+
+
+13. Severability
+If any provision of these Terms is found to be unenforceable or invalid, the remaining provisions will remain in full force and effect.
+
+
+14. Contact Us
+Climb Fitness Inc.
+corporate@climbfitness.ca`
+
+
+

@@ -1,5 +1,5 @@
 {
   "/page": "app/page.js",
-  "/waitlist/page": "app/waitlist/page.js",
-  "/api/waitlist/route": "app/api/waitlist/route.js"
+  "/terms-of-service/page": "app/terms-of-service/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js"
 }
